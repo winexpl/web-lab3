@@ -1,19 +1,16 @@
-package com.lab2.dto;
+package com.lab3.dto;
 
 import java.time.LocalDate;
-
-import com.lab2.entity.Project;
 
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder
-public class TaskDTO {
+public class ProjectDTO {
     private int id;
-    private int projectId;
     private String name;
     private String descr;
-    private boolean completed;
+    private LocalDate beginDate;
     private LocalDate endDate;
 }

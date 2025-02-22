@@ -1,8 +1,8 @@
-package com.lab2.repository;
+package com.lab3.repository;
 
 import java.util.List;
 
-import com.lab2.entity.Task;
+import com.lab3.entity.Task;
 
 public interface TaskRepository {
     List<Task> findByPId(int pId);

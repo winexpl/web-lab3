@@ -1,4 +1,4 @@
-package com.lab2.repository;
+package com.lab3.repository;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -10,8 +10,8 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.lab2.dto.ActiveTasksCount;
-import com.lab2.entity.Project;
+import com.lab3.dto.ActiveTasksCount;
+import com.lab3.entity.Project;
 
 import jakarta.transaction.Transactional;
 

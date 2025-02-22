@@ -1,4 +1,4 @@
-package com.lab2.service;
+package com.lab3.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
-import com.lab2.dto.TaskDTO;
-import com.lab2.entity.Task;
-import com.lab2.repository.JpaTaskRepository;
+import com.lab3.dto.TaskDTO;
+import com.lab3.entity.Task;
+import com.lab3.repository.JpaTaskRepository;
 
 @Service
 public class TaskService {

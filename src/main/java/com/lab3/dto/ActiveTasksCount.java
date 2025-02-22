@@ -1,4 +1,4 @@
-package com.lab2.dto;
+package com.lab3.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

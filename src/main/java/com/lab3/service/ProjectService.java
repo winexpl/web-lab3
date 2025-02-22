@@ -1,4 +1,4 @@
-package com.lab2.service;
+package com.lab3.service;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -9,11 +9,11 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.lab2.dto.ActiveTasksCount;
-import com.lab2.dto.ProjectDTO;
-import com.lab2.entity.Project;
-import com.lab2.repository.JpaProjectRepository;
-import com.lab2.repository.JpaTaskRepository;
+import com.lab3.dto.ActiveTasksCount;
+import com.lab3.dto.ProjectDTO;
+import com.lab3.entity.Project;
+import com.lab3.repository.JpaProjectRepository;
+import com.lab3.repository.JpaTaskRepository;
 
 import jakarta.transaction.Transactional;
 

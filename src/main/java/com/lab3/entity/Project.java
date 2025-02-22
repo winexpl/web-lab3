@@ -1,4 +1,4 @@
-package com.lab2.entity;
+package com.lab3.entity;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
 import lombok.Data;
 
-import com.lab2.dto.ActiveTasksCount;
+import com.lab3.dto.ActiveTasksCount;
 
 
 @Entity

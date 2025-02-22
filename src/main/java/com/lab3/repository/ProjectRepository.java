@@ -1,9 +1,9 @@
-package com.lab2.repository;
+package com.lab3.repository;
 
 import java.time.LocalDate;
 import java.util.List;
 
-import com.lab2.entity.Project;
+import com.lab3.entity.Project;
 
 public interface ProjectRepository {
     Project save(Project project);
