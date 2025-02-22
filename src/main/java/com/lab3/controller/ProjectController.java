@@ -12,9 +12,9 @@ import com.lab3.entity.Project;
 import com.lab3.service.ProjectService;
 
 import jakarta.annotation.Nullable;
+import jakarta.annotation.security.RolesAllowed;
 import lombok.AllArgsConstructor;
 
-import org.springframework.web.bind.annotation.PutMapping;
 
 import java.net.URI;
 import java.util.List;
@@ -27,6 +27,7 @@ import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 
 
 
@@ -51,9 +52,8 @@ public class ProjectController {
     }
     
     // 3) Создаёт новый проект (без задач).
-    
+    @RolesAllowed("ROLE_ADMIN")
     @PostMapping
-    @Secured("ROLE_ADMIN")
     ResponseEntity<ProjectDTO> save(@RequestBody Project project) {
         try {
             ProjectDTO savedProject = projectService.saveProject(project);
@@ -71,8 +71,8 @@ public class ProjectController {
     }
 
     // 4) Обновляет проект.
+    @RolesAllowed("ROLE_ADMIN")
     @PutMapping("/{id}")
-    @Secured("ROLE_ADMIN")
     public ResponseEntity<Integer> update(@PathVariable int id, @RequestBody Project project) {
         project.setId(id);
         try {
@@ -88,8 +88,8 @@ public class ProjectController {
     }
 
     // 5) Удаляет проект.
-    @DeleteMapping("/{id}")
     @Secured("ROLE_ADMIN")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> remove(@PathVariable int id) {
         projectService.removeProject(id);
         return ResponseEntity.ok().build();
